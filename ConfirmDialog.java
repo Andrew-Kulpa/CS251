@@ -1,3 +1,9 @@
+/*	Andrew Kulpa
+	CS251
+	Simple practice using dialog with user through JOptionPane.
+*/
+
+
 import javax.swing.JOptionPane;
 public class ConfirmDialog
 {
