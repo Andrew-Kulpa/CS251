@@ -15,19 +15,19 @@ public class AskForColors
 	{
       Scanner scan = new Scanner(System.in);
 		
-      System.out.println("Enter the amount of Red, Green, and Blue below: ");
-      System.out.println("(This must be an integer between 0 and 255) ");
+      System.out.println("Enter the amount of Red, Green, and Blue below: "); //Setup RGB Values
+      System.out.println("(This must be an integer between 0 and 255) "); //Tell user the constraints/range
       
 		System.out.print("Red: ");
-		int red = scan.nextInt();
+		int red = scan.nextInt(); //init red value
 		
 		System.out.print("Green: ");
-		int green = scan.nextInt();
+		int green = scan.nextInt(); //init green value
 		
 		System.out.print("Blue: ");
-		int blue = scan.nextInt();
+		int blue = scan.nextInt(); //init blue value
       
-      Color randColor = new Color (red,green,blue);
+      Color randColor = new Color (red,green,blue); //init color from rgb values
       
       StdDraw.setCanvasSize(300,300);
       StdDraw.setXscale(0, 300);
