@@ -7,26 +7,27 @@
 
 public class Circle
 {
+   //Initialize private member variables
    private Vector2D pos;
    private final double r;
    
-   public Circle( double x0, double y0, double r0 )
+   public Circle(double x0, double y0, double r0 ) //Setup Circle constructor wanting x0,y0 for position and r0 for radius.
    {
       pos = new Vector2D( x0, y0 );
       r = r0;
    }
    
-   public double area()
+   public double area()//return the area of the Circle
    {
       return Math.PI*r*r;
    }
    
-   public double perimeter()
+   public double perimeter()//return the perimeter of the Circle
    {
       return 2*Math.PI*r;
    }
    
-   public boolean intersects( Circle b )
+   public boolean intersects( Circle b ) //determine if the circle intersects with another Circle object
    {
       // if one is inside the other, they can't intersect
       if( contains(b) || b.contains(this) )
@@ -36,7 +37,7 @@ public class Circle
       return (r + b.r) >= centerDist(b);
    }
    
-   public boolean contains( Circle b )
+   public boolean contains( Circle b ) //determine if the circle contains the Circle object argument.
    {
       if( b.r >= r )
          return false; // b can't be inside a smaller or the same circle
